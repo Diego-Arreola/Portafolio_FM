@@ -4,6 +4,62 @@
 
 .landing{
     margin: auto;
+    display: grid;
+    place-content: center;
+}
+
+.landing h1:nth-child(1), h2:nth-child(2){
+    grid-column: span 2;
+}
+
+.buttons #projects_btn{
+    margin: auto;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    width: 50%;
+    height: 200%;
+    padding: 50;
+}
+
+.buttons #CV_btn{
+    margin: auto;
+    justify-content: center;
+    background-color: white;
+    color: black;
+}
+
+.about_me{
+    margin: auto;
+    place-content: center;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about_me img:first-child{
+    margin: auto;
+    justify-content: center;
+    grid-row: span 2;
+}
+
+.about_me img{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.proyects{
+    margin: auto;
+    place-content: center;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.proyects h3:first-child{
+    margin: auto;
+    grid-column: span 2;
 }
 
 .habilities{
