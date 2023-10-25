@@ -1,0 +1,20 @@
+*{
+    font-family:'Poppins', sans-serif;
+}
+
+.landing{
+    margin: auto;
+}
+
+.habilities{
+    margin: auto;
+    place-content: center;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.habilities h3:first-child{
+    margin: auto;
+    grid-column: span 3;
+}

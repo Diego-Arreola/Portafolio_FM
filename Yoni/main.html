@@ -1,32 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi portafolio</title>
-    <script src="messages.js"></script>
+    <title>Mi Portafolio</title>
+    <style>
+        @import url("styles/styles.css");
+    </style>
 </head>
-
 <body>
-    <div>
-        <h1>{{btn.myprojects}}</h1>
-        <h2>UX & UI y diseño digital</h2>
-    </div>
-    <div>
-        <button>Mis proyectos</button>
-        <button>Mi CV</button>
-    </div>
 
-    <div>
-        <p>Frida Molina</p>
-        <div>
-            <p>Apacionado por el <strong>diseño web</strong> y enfocado en la experiencia de usuario,
-                <strong>co-fundadora</strong> de "Insurrekta", actualmente trabajando en la industria por más de 2 años
-                consecutivos.</p>
-            <button>Contáctame</button>
-        </div>
+<div class="header">
+    <div class="menu">
+        <a href="#">Inicio</a>
+        <a href="#">Proyectos</a>
+        <a href="#">CV</a>
+        <a href="#">Contacto</a>
     </div>
+    <div class="button">
+        <!-- Botón para cambiar de idioma -->
+        <button id="toggleLanguage">Cambiar Idioma</button>
+    </div>
+</div>
+
+
+<div class="landing">
+    <h1 data-i18n="title1"></h1>
+<h2 data-i18n="title2"></h2>
+<button data-i18n="projects_btn"></button>
+<button data-i18n="CV_btn"></button>
+</div>
+
+<div class="about_me">
+    <p data-i18n="description"></p>
+    <button data-i18n="contact_btn"></button>
+</div>
+
+<div class="proyects">
+    <h3 data-i18n="title"></h3>
+    <p data-i18n="genderfloow"></p>
+    <button data-i18n="viewmore"></button>
+    <p data-i18n="insurrekta"></p>
+    <button data-i18n="viewmore"></button>
+</div>
+
+<div class="habilities">
+    <h3 data-i18n="habilities"></h3>
+    <div class="UI&UX">
+        <p data-i18n="UXandUI"></p>
+        <p data-i18n="description1"></p>
+    </div>
+    <div class="HTML&CSS">
+        <p data-i18n="htmlandcss"></p>
+        <p data-i18n="description2"></p>
+    </div>
+    <div class="Figam&Adoba">
+        <p data-i18n="figma"></p>
+        <p data-i18n="description3"></p>
+    </div>
+</div>
+
+<div class="footer">
+
+</div>
+
+<script src="scripts.js"></script>
 </body>
-
 </html>

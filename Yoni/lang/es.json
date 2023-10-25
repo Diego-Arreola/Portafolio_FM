@@ -1,0 +1,27 @@
+{
+    "projects_btn": "Mis proyectos", 
+    "CV_btn": "Mi CV", 
+    "contact_btn": "Contáctame", 
+    "viewmore": "Ver más",
+    
+    "about": "Sobre mi", 
+    "projects": "Proyectos", 
+    "habilities": "Habilidades", 
+    "contact": "Contacto",
+    
+    "title1": "Diseñando tus visiones:",
+    "title2": "UX & UI y diseño digital",
+
+    "description": "Apacionado por el diseño web y enfocado en la experiencia de usuario, co-fundadora de Insurrekta, actualmente trabajando en la industria por más de 2 añosconsecutivos", 
+        
+    "title":"Mis proyectos",
+    "genderfloow": "Una aplicacion de salud menstrual enfocada en la experiencia de las personas trans.", 
+    "insurrekta": "Colectivo sin fines de lucro que busca ayudar a micro, pequeñas y medianas empresas del estado de Mérida, Yucatán",
+        
+    "UXandUI": "Diseño UX&UI",
+    "description1": "Investigación de usuario y mercado, prototipado y mequetación de página web.",
+    "htmlandcss": "HTML y CSS",
+    "description2": "Conocimientos básicos teóricos en HTML y CSS", 
+    "figma": "Figma y paquetería Adobe", 
+    "description3": "Experiencia usando los softwares de Figma y toda la paqueteria de Adobe"
+}

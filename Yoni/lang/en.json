@@ -1,0 +1,27 @@
+{
+    "projects_btn": "My projects", 
+    "CV_btn": "My CV", 
+    "contact_btn": "Contact me", 
+    "viewmore": "More",
+    
+    "about": "About me", 
+    "projects": "Projects", 
+    "habilities": "Habilities", 
+    "contact": "Contact",
+    
+    "title1": "Designing your visions:",
+    "title2": "UX & UI and digital design",
+
+    "description": "Web design passionate, focused on user experience, and Insurekta co-founder. Currently working in the industry for 2 years straight", 
+        
+    "title":"My projects",
+    "genderfloow": "Menstrual health app focused on trans people's experience.", 
+    "insurrekta": "Nonprofit collective aimed to boost micro, small and medium-sized companies from Mérida, Yucatán ",
+        
+    "UXandUI": "UX & UI design",
+    "description1": "Market and user research,web-page prototyping and layout design.",
+    "htmlandcss": "HTML and CSS",
+    "description2": "Basic theoretical knowlegde in HTML and CSS", 
+    "figma": "Figma and Adobe suite", 
+    "description3": "Hands-on experience on Figma and all of Adobe's suite"
+}
