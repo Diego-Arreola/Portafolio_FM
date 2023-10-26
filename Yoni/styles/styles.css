@@ -3,11 +3,13 @@
 }
 
 .header{
+    margin-top: 2%;
     position: relative;
     display: grid;
     align-items: center;    
     grid-template-columns: repeat(4, 1fr) auto auto;
     grid-template-rows: 1fr;
+    margin-bottom: 5%;
 }
 
 .header a{
@@ -16,6 +18,23 @@
     opacity: 75%;
     margin: auto;
 }
+
+.header a[data-i18n="about"]{
+    margin-right: -10px;  /* Ajusta según tus necesidades */
+}
+
+.header a[data-i18n="projects"]{
+    margin-right: 10px;
+}
+
+.header a[data-i18n="contact"]{
+    margin-left: -10px;  /* Ajusta según tus necesidades */
+}
+
+.header a[data-i18n="habilities"] {
+    margin-left: 10px;
+}
+
 
 .language-buttons{
     display: flex;  /* Alinea los botones horizontalmente */
@@ -27,7 +46,7 @@
 }
 
 .lang-btn {
-
+    font-weight: bold;
     border: 2px solid transparent;  /* Añade un borde transparente para mantener el tamaño del botón constante */
     background-color: transparent;
     font-size: 16px;
@@ -49,17 +68,23 @@
     margin: auto;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-
 }
 
-.landing h1:first-child, .landing h2:nth-child(2){
+.landing p:first-child, .landing p:nth-child(2){
     place-content: center;
     justify-content: center;
     margin: auto;
     grid-column: span 2;
+    margin-bottom: 1%;
 }
 
-.landing h1:first-child{
+.landing #title1{
+    font-weight: bolder;
+    font-size:320%;
+}
+
+.landing #title2{
+    font-size: 320%;
 }
 
 .landing #projects_btn{
@@ -67,11 +92,12 @@
     justify-content: center;
     background-color: black;
     color: white;
-    width: 45%;
-    height: 100%;
+    width: 25%;
+    height: 85%;
     padding: 50;
     border-radius: 10px;
-    margin-left: 40%;
+    margin-left: 70%;
+    font-size: 100%;
 }
 
 .landing #CV_btn{
@@ -79,12 +105,12 @@
     justify-content: center;
     background-color: white;
     color: black;
-    width: 45%;
-    height: 100%;
+    width: 25%;
+    height: 85%;
     padding: 50;
     border-radius: 10px;
-    margin-right: 40%;
-
+    margin-right: 70%;
+    font-size: 100%;
 }
 
 .about_me{
@@ -95,18 +121,21 @@
     grid-template-rows: repeat(3, 1fr);
 }
 
-.about_me :first-child{
-    margin-left: 25%;
+.about_me p:first-child{
+    margin-left: 20%;
     grid-column: span 2;
+    align-self: end;
+    font-weight: bolder;
+    font-size: 250%;
 }
 
 
 .about_me img{
     grid-row: span 2;
     border-radius: 10px;
-    margin-left: 50%;
-    width: 200px;
-    height: 200px;
+    margin-left: 40%;
+    width: 35%;
+    height: 100%;
 }
 
 .about_me button{
@@ -117,7 +146,6 @@
     padding: 50;
     border-radius: 10px;
     margin-right: 25%;
-    
 }
 
 .about_me p{
@@ -138,15 +166,46 @@ margin: auto;}
 
 .habilities{
     margin: auto;
-    place-content: center;
     display: grid;
-    justify-content: center;
+    justify-items: center;
     grid-template-columns: repeat(3, 1fr);
 }
 
-.habilities h3:first-child{
-    margin: auto;
+.habilities #description-habilities{
+    margin-top: 5%;
     grid-column: span 3;
+    font-size: 250%;
+}
+
+.UIUX, .HTMLCSS, .FigamAdoba {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center;    /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    height: 100%;           /* Ocupa toda la altura disponible */
+}
+
+.UIUX img, .HTMLCSS img, .FigamAdoba img{
+    width: 35%;
+    height: 60%;
+}
+
+.footer{
+    margin-top: auto;
+    background-color: rgba(128, 128, 128, 0.2);
+    margin: 0;
+    padding: 0;
+    color: black;
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 /* Ejemplo de media query para pantallas pequeñas */
@@ -154,5 +213,11 @@ margin: auto;}
     .header {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, auto);
+    }
+
+    .language-buttons {
+        position: static;  /* Desactiva el posicionamiento absoluto en pantallas pequeñas */
+        transform: none;
+        justify-content: flex-end;  /* Alinea los botones a la derecha */
     }
 }

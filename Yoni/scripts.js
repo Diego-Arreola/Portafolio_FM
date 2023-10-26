@@ -1,13 +1,14 @@
 function loadLanguage(lang) {
-  fetch("lang/"+ lang + '.json')
-      .then(response => response.json())
-      .then(data => {
-          document.querySelectorAll('[data-i18n]').forEach(element => {
-              const key = element.getAttribute('data-i18n');
-              element.textContent = data[key];
-          });
-      });
+    fetch("lang/"+ lang + '.json')
+        .then(response => response.json())
+        .then(data => {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                element.innerHTML = data[key];  // Cambia textContent por innerHTML
+            });
+        });
 }
+  
 
 function setLanguage(lang) {
   localStorage.setItem('selectedLanguage', lang);
