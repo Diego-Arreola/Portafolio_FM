@@ -1,32 +1,34 @@
-let currentLanguage = 'en'; // Idioma predeterminado
-
 function loadLanguage(lang) {
-    // Carga el archivo JSON correspondiente al idioma seleccionado
-    fetch("lang/" + lang + '.json')
-        .then(response => response.json())
-        .then(data => {
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                element.textContent = data[key];
-            });
-        });
+  fetch("lang/"+ lang + '.json')
+      .then(response => response.json())
+      .then(data => {
+          document.querySelectorAll('[data-i18n]').forEach(element => {
+              const key = element.getAttribute('data-i18n');
+              element.textContent = data[key];
+          });
+      });
 }
 
 function setLanguage(lang) {
-    // Guarda el idioma seleccionado en localStorage
-    localStorage.setItem('selectedLanguage', lang);
-    loadLanguage(lang);
+  localStorage.setItem('selectedLanguage', lang);
+  loadLanguage(lang);
+
+  // Resaltar el botón del idioma seleccionado
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.remove('selected');
+      if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('selected');
+      }
+  });
 }
 
-document.getElementById('toggleLanguage').addEventListener('click', function() {
-    // Cambia el idioma
-    currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
-    setLanguage(currentLanguage);
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+      const lang = btn.getAttribute('data-lang');
+      setLanguage(lang);
+  });
 });
 
 // Al cargar la página, verifica si hay un idioma guardado en localStorage
-const savedLanguage = localStorage.getItem('selectedLanguage');
-if (savedLanguage) {
-    currentLanguage = savedLanguage;
-}
-loadLanguage(currentLanguage);
+const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';
+setLanguage(savedLanguage);

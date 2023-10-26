@@ -2,52 +2,125 @@
     font-family:'Poppins', sans-serif;
 }
 
-.landing{
-    margin: auto;
+.header{
+    position: relative;
     display: grid;
-    place-content: center;
+    align-items: center;    
+    grid-template-columns: repeat(4, 1fr) auto auto;
+    grid-template-rows: 1fr;
 }
 
-.landing h1:nth-child(1), h2:nth-child(2){
+.header a{
+    color: gray;
+    text-decoration: none;
+    opacity: 75%;
+    margin: auto;
+}
+
+.language-buttons{
+    display: flex;  /* Alinea los botones horizontalmente */
+    gap: 10px;
+    position: absolute;
+    top: 50%;  /* Centra verticalmente */
+    right: 0;  /* Pegado al lado derecho */
+    transform: translateY(-50%);
+}
+
+.lang-btn {
+
+    border: 2px solid transparent;  /* Añade un borde transparente para mantener el tamaño del botón constante */
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 50%;  /* Hace que el botón sea circular */
+    transition: border-color 0.3s;  /* Transición suave al cambiar el color del borde */
+}
+
+.lang-btn.selected {
+    border-color: blue;  /* Cambia el color del borde a azul cuando el botón esté seleccionado */
+    color: black;  /* Mantiene el color del texto en negro */
+}
+
+
+
+.landing{
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+}
+
+.landing h1:first-child, .landing h2:nth-child(2){
+    place-content: center;
+    justify-content: center;
+    margin: auto;
     grid-column: span 2;
 }
 
-.buttons #projects_btn{
+.landing h1:first-child{
+}
+
+.landing #projects_btn{
     margin: auto;
     justify-content: center;
     background-color: black;
     color: white;
-    width: 50%;
-    height: 200%;
+    width: 45%;
+    height: 100%;
     padding: 50;
+    border-radius: 10px;
+    margin-left: 40%;
 }
 
-.buttons #CV_btn{
+.landing #CV_btn{
     margin: auto;
     justify-content: center;
     background-color: white;
     color: black;
+    width: 45%;
+    height: 100%;
+    padding: 50;
+    border-radius: 10px;
+    margin-right: 40%;
+
 }
 
 .about_me{
-    margin: auto;
     place-content: center;
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
 
-.about_me img:first-child{
-    margin: auto;
-    justify-content: center;
-    grid-row: span 2;
+.about_me :first-child{
+    margin-left: 25%;
+    grid-column: span 2;
 }
+
 
 .about_me img{
+    grid-row: span 2;
+    border-radius: 10px;
+    margin-left: 50%;
     width: 200px;
     height: 200px;
-    margin: auto;
 }
+
+.about_me button{
+    background-color: black;
+    color: white;
+    width: 20%;
+    height: 50%;
+    padding: 50;
+    border-radius: 10px;
+    margin-right: 25%;
+}
+
+.about_me p{
+margin: auto;}
 
 .proyects{
     margin: auto;
@@ -73,4 +146,12 @@
 .habilities h3:first-child{
     margin: auto;
     grid-column: span 3;
+}
+
+/* Ejemplo de media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+    }
 }

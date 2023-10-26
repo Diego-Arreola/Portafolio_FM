@@ -11,26 +11,22 @@
 <body>
 
 <div class="header">
-    <div class="menu">
-        <a href="#">Inicio</a>
-        <a href="#">Proyectos</a>
-        <a href="#">CV</a>
-        <a href="#">Contacto</a>
-    </div>
-    <div class="button">
-        <!-- Botón para cambiar de idioma -->
-        <button id="toggleLanguage">Cambiar Idioma</button>
+    <a href="#" data-i18n="about"></a>
+    <a href="#" data-i18n="projects"></a>
+    <a href="#" data-i18n="habilities"></a>
+    <a href="#" data-i18n="contact"></a>
+    <div class="language-buttons">
+        <button class="lang-btn" id="btnES" data-lang="es">ES</button>
+        <button class="lang-btn" id="btnEN" data-lang="en">EN</button>
     </div>
 </div>
 
-
 <div class="landing">
-    <div><h1 data-i18n="title1"></h1></div>
-    <div><h2 data-i18n="title2"></h2></div>
-    <div class="buttons">
-        <button data-i18n="projects_btn" id="projects_btn"></button>
-        <button data-i18n="CV_btn" id="CV_btn"></button>
-    </div>
+    <h1 data-i18n="title1"></h1>
+    <h2 data-i18n="title2"></h2>
+    <button data-i18n="projects_btn" id="projects_btn"></button>
+    <button data-i18n="CV_btn" id="CV_btn"></button>
+    
 </div>
 <br>
 <br>
@@ -46,6 +42,7 @@
 <br>
 
 <div class="about_me">
+    <h1>Frida Molina</h1>
     <img src="assets/IMG_6795EDIT (1).jpg" alt="foto">
     <p data-i18n="description"></p>
     <button data-i18n="contact_btn"></button>
@@ -55,7 +52,7 @@
     <h3 data-i18n="title"></h3>
     <div class="gender-floow">
         <img src="assets/GF.svg" alt="gender-floow">
-        <img src="/assets/Título GF.svg" alt="gender-floow">
+        <img src="assets/Título GF.svg" alt="gender-floow">
         <p data-i18n="genderfloow"></p>
         <button data-i18n="viewmore"></button>
     </div>
