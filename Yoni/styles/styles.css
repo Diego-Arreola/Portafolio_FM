@@ -23,17 +23,13 @@
     margin-right: -10px;  /* Ajusta según tus necesidades */
 }
 
-.header a[data-i18n="projects"]{
-    margin-right: 10px;
-}
+
 
 .header a[data-i18n="contact"]{
     margin-left: -10px;  /* Ajusta según tus necesidades */
 }
 
-.header a[data-i18n="habilities"] {
-    margin-left: 10px;
-}
+
 
 
 .language-buttons{
@@ -41,7 +37,7 @@
     gap: 10px;
     position: absolute;
     top: 50%;  /* Centra verticalmente */
-    right: 0;  /* Pegado al lado derecho */
+    right: 5%;  /* Pegado al lado derecho */
     transform: translateY(-50%);
 }
 
@@ -93,11 +89,11 @@
     background-color: black;
     color: white;
     width: 25%;
-    height: 85%;
+    height: 75%;
     padding: 50;
     border-radius: 10px;
     margin-left: 70%;
-    font-size: 100%;
+    font-size: 120%;
 }
 
 .landing #CV_btn{
@@ -106,11 +102,11 @@
     background-color: white;
     color: black;
     width: 25%;
-    height: 85%;
+    height: 75%;
     padding: 50;
     border-radius: 10px;
     margin-right: 70%;
-    font-size: 100%;
+    font-size: 120%;
 }
 
 .about_me{
@@ -123,40 +119,75 @@
 }
 
 .about_me p:first-child{
+    font-family: 'Poppins Black', sans-serif;
     margin-left: 20%;
     grid-column: span 2;
     align-self: end;
-    font-weight: bolder;
-    font-size: 250%;
+    font-weight: 900;
+    font-size: 400%;
+    margin-bottom: 0;
 }
 
 
 .about_me img{
     grid-row: span 2;
-    border-radius: 10px;
+    border-radius: 10%;
     margin-left: 40%;
-    width: 35%;
-    height: 100%;
+    width: 40%;
 }
 
 .about_me button{
     background-color: black;
     color: white;
-    width: 20%;
-    height: 50%;
+    width: 27%;
+    height: 35%;
     padding: 50;
     border-radius: 10px;
-    margin-right: 25%;
     align-self: center;
+    margin-bottom: 0;
+    margin-left: 5%;
+    font-size: 120%;
 }
 
-.about_me p{
+#curved-line{
+    position: absolute;  /* Posicionamiento absoluto */
+    top: 50%;  /* Centra verticalmente */
+    left: 0;  /* Pegado a la derecha */
+    transform: translateY(300%);
+    height: 20%;
+}
+
+#gradient{
+    position: absolute;  /* Posicionamiento absoluto */
+    top: 100%;  /* Centra verticalmente */
+    transform: translateY(530%);
+    width: 25%;
+    right: 37%;
     margin: auto;
 }
 
+#f-letter{
+    position: absolute;  /* Posicionamiento absoluto */
+    top: 30%;  /* Centra verticalmente */
+    left: 12%;  /* Pegado a la derecha */
+    transform: translateY(135%);
+    height: 30%;
+}
+
+#m-letter{
+    position: absolute;  /* Posicionamiento absoluto */
+    top: 65%;  /* Centra verticalmente */
+    left: 34%;  /* Pegado a la derecha */
+    transform: translateY(300%);
+    height: 15%;
+}
+
+
 .about_me #description{
     text-align: center;
-    border-right: 45%;
+    width: 38%;
+    justify-content: start;
+    align-self: end;
 }
 
 .proyects{
@@ -180,19 +211,20 @@
     flex-direction: column; /* Alinea los elementos verticalmente */
     align-items: center;    /* Centra los elementos horizontalmente */
     justify-content: center; /* Centra los elementos verticalmente */
-    height: 100%;
+    height: 85%;
     border: 2px solid #000;
     border-radius: 10px;
     text-align: center;
     width: 35%;
     margin: auto;
     padding: 5%;
+    box-shadow: 0 15px 6px -2px rgba(0, 0, 0, 0.15); 
 }
 
 .gender-floow #GF-text{
-    height: 135%;
     width: 100%;
     align-self: start;
+    margin-top: 0   ;
 }
 
 .gender-floow #GF-logo{
@@ -201,8 +233,12 @@
 }
 
 .insurrekta img{
-    height: 115%;
     width: 100%;
+}
+
+.proyects #description{
+    font-size: 140%;
+    margin-bottom: 15%;
 }
 
 .proyects button{
@@ -210,11 +246,12 @@
     justify-content: center;
     background-color: white;
     color: black;
-    width: 25%;
-    height: 85%;
+    width: 45%;
+    height: 10%;
     padding: 50;
     border-radius: 10px;
-    font-size: 100%;
+    font-size: 85%;
+    margin-bottom: 0;
 }
 
 .habilities{
@@ -222,15 +259,24 @@
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 10%;
 }
 
 .habilities #description-habilities{
     margin-top: 15%;
     grid-column: span 3;
     font-size: 250%;
+    margin-bottom: 0;
+}
+
+.habilities img:nth-child(2){
+    grid-column: span 3;
+    width: 20%;
+    margin-bottom: 8%;
 }
 
 .UIUX, .HTMLCSS, .FigamAdoba {
+    width: 45%;
     display: flex;
     flex-direction: column; /* Alinea los elementos verticalmente */
     align-items: center;    /* Centra los elementos horizontalmente */
@@ -238,9 +284,32 @@
     height: 100%;           /* Ocupa toda la altura disponible */
 }
 
-.UIUX img, .HTMLCSS img, .FigamAdoba img{
-    width: 35%;
-    height: 60%;
+.HTMLCSS img{
+    width: 50%;
+    height: 90%;
+}
+
+.UIUX img, .FigamAdoba img{
+    width:  70%;
+    height: 90%;
+}
+
+.UIUX #title, .HTMLCSS #title, .FigamAdoba #title{
+    font-size: 170%;
+    text-align: center;
+}
+
+.FigamAdoba #title{
+    margin-bottom: 2%;
+}
+
+.UIUX #description, .HTMLCSS #description, .FigamAdoba #description{
+    font-size: 85%;
+    text-align: center;
+}
+
+.UIUX #description, .FigamAdoba #description{
+    margin-bottom: 0;
 }
 
 .footer{
@@ -253,12 +322,25 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.footer p:first-child, .footer p:nth-child(3){
+    margin-left: 8%;
+}
+.footer p:nth-child(2), p:last-child{
+    text-align: right;
+    margin-right: 8%;
 }
 
 html, body{
     margin: 0;
     padding: 0;
     height: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 /* Ejemplo de media query para pantallas pequeñas */
